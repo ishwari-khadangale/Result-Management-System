@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Result Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">RMS</div>
+
+    <div>
+        <h1>Result Management System</h1>
+        <p>Electronics & Computer Engineering | B.Tech 2nd Year</p>
+    </div>
+</header>
+
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#result">View Result</a>
+    <a href="#about">About</a>
+</nav>
+
+
+<main>
+
+    <!-- HOME SECTION -->
+
+    <section id="home" class="hero">
+
+        <h2>Student Result Portal</h2>
+
+        <p>
+            Enter your roll number to view your semester result.
+        </p>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="rollInput"
+                placeholder="Enter Roll Number"
+            >
+
+            <button onclick="showResult()">
+                View Result
+            </button>
+
+        </div>
+
+        <p id="message"></p>
+
+    </section>
+
+
+    <!-- RESULT SECTION -->
+
+    <section id="result" class="result-card">
+
+        <div class="result-heading">
+
+            <div>
+
+                <h2>Semester Result</h2>
+
+                <p id="studentName">
+                    Student Name
+                </p>
+
+            </div>
+
+            <button
+                class="print-btn"
+                onclick="window.print()"
+            >
+                Print Result
+            </button>
+
+        </div>
+
+
+        <!-- STUDENT INFORMATION -->
+
+        <div class="student-info">
+
+            <div>
+                <b>Roll No:</b>
+                <span id="rollNo">-</span>
+            </div>
+
+            <div>
+                <b>Branch:</b>
+                Electronics & Computer Engineering
+            </div>
+
+            <div>
+                <b>Year:</b>
+                Second Year B.Tech
+            </div>
+
+            <div>
+                <b>Semester:</b>
+                IV
+            </div>
+
+        </div>
+
+
+        <!-- RESULT TABLE -->
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Sr. No.</th>
+
+                    <th>Subject</th>
+
+                    <th>Max Marks</th>
+
+                    <th>Marks Obtained</th>
+
+                    <th>Grade</th>
+
+                    <th>Grade Point</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="resultTable">
+
+            </tbody>
+
+        </table>
+
+
+        <!-- RESULT SUMMARY -->
+
+        <div class="summary">
+
+            <div>
+
+                <span>Total Marks</span>
+
+                <strong id="totalMarks">
+                    0 / 600
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>Percentage</span>
+
+                <strong id="percentage">
+                    0%
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>SGPA</span>
+
+                <strong id="sgpa">
+                    0.00
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>Result</span>
+
+                <strong id="status">
+                    -
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT SECTION -->
+
+    <section id="about" class="about">
+
+        <h2>About the Project</h2>
+
+        <p>
+
+            The Result Management System is a web-based application
+            developed to display and manage student academic results.
+
+            It reduces manual calculations and provides students
+            with an easy way to check subject-wise marks, grades,
+            percentage and SGPA.
+
+        </p>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 Result Management System |
+        B.Tech Electronics & Computer Engineering
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
